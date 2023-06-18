@@ -2,6 +2,12 @@ public class Warmup {
     public static void main(String[] args) {
         System.out.println(sleepIn(true, false));
         System.out.println(monkeyTrouble(true, true));
+        System.out.println(missingChar("kitten", 1));
+    }
+
+    public static String missingChar(String str, int n) {
+        String result = str.substring(0, n) + str.substring(n+1);
+        return result;
     }
 
     public static boolean sleepIn(boolean weekday, boolean vacation) {
@@ -63,6 +69,16 @@ public class Warmup {
             return true;
         } else {
             return false;
+        }
+    }
+
+    public static String notString(String str) {
+
+        if (str.startsWith("not")) {
+            return str;
+        } else {
+            str = "not " + str;
+            return str;
         }
     }
 }
